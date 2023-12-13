@@ -1,0 +1,86 @@
+---
+title: Spike only build of SARS-CoV-2
+build_url: https://github.com/neherlab/spike-only
+maintainers:
+  - name: Cornelius Roemer
+    url: https://neherlab.org
+  - name: Richard Neher
+    url: https://neherlab.org
+data_provenance:
+  - name: GISAID
+colorings:
+  - key: country
+    title: Country
+    type: categorical
+  - key: division
+    title: Admin Division
+    type: categorical
+  - key: region
+    title: Region
+    type: categorical
+  - key: location
+    title: Location
+    type: categorical
+  - key: host
+    title: Host
+    type: categorical
+  - key: age
+    title: Age
+    type: continuous
+  - key: sex
+    title: Sex
+    type: categorical
+  - key: author
+    title: Authors
+    type: categorical
+  - key: originating_lab
+    title: Originating Lab
+    type: categorical
+  - key: submitting_lab
+    title: Submitting Lab
+    type: categorical
+  - key: date_submitted
+    title: Submission Date
+    type: ordinal
+  - key: clade_nextstrain
+    title: Nextstrain clade
+    type: ordinal
+  - key: clade_who
+    title: WHO variant
+    type: categorical
+  - key: Nextclade_pango
+    title: Pango lineage
+    type: categorical
+  - key: immune_escape
+    title: Immune escape vs BA.2
+    type: continuous
+  - key: ace2_binding
+    title: ACE2 binding vs BA.2
+    type: continuous
+geo_resolutions:
+  - division
+  - country
+  - region
+display_defaults:
+  color_by: region
+  distance_measure: div
+  geo_resolution: country
+  map_triplicate: true
+  branch_label: aa
+  transmission_lines: false
+filters:
+  - region
+  - country
+  - division
+  - host
+  - author
+  - date_submitted
+  - originating_lab
+  - submitting_lab
+  - clade_nextstrain
+  - clade_who
+  - Nextclade_pango
+panels:
+  - tree
+  - map
+  - entropy

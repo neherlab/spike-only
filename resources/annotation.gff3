@@ -1,0 +1,7 @@
+##gff-version 3
+##sequence-region MN908947 1 29903
+# Gene map (genome annotation) of SARS-CoV-2 in GFF format.
+# For gene map purpses we only need some of the columns. We substitute unused values with "." as per GFF spec.
+# See GFF format reference at https://www.ensembl.org/info/website/upload/gff.html
+# seqname	source	feature	start	end	score	strand	frame	attribute
+MN908947	GenBank	CDS	1	3822	.	+	.	gene_name=S
